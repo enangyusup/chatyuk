@@ -11,3 +11,8 @@ public/scripts/components
 
 # Leave out compiled bundles
 bundle.js
+tests/reports/FIREFOX_36.0.4_MAC_chat_cept.xml
+tests/reports/FIREFOX_36.0.4_MAC_login.xml
+tests/reports/FIREFOX_36.0.4_MAC_login_and_enter_test_message.xml
+tests/reports/FIREFOX_36.0.4_MAC_relogin_after_reloading_browser.xml
+npm-debug.log

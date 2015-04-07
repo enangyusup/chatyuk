@@ -34,11 +34,20 @@ describe('Chatyuk',function() {
     var renderComponentSpy = null;
     var initConfigSpy = null;
     var chatyuk = null;
+    var commsInitSpy = null;
 
     beforeEach(function() {
       chatyuk = Object.create(Chatyuk);
       renderComponentSpy = spyOn(chatyuk, 'renderComponent');
       initConfigSpy = spyOn(chatyuk, 'initConfig');
+      commsInitSpy = spyOn(Comms, 'init');
+    });
+
+    it('initializes the comms object', function() {
+
+      chatyuk.init('fakeParentEl', 'fakeConfig');
+      expect(commsInitSpy).toHaveBeenCalled();
+
     });
 
     it('calls initConfig with the passed in config', function() {

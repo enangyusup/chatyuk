@@ -15,6 +15,7 @@ var Chatyuk = {
   },
 
   init: function(parentEl, config) {
+    comms.init();
     this.initConfig(config);
     this.renderComponent(parentEl);
   },
@@ -27,6 +28,10 @@ var Chatyuk = {
   },
 
   renderComponent: function(parentEl) {
+    // if(comms.hasPriorSession()) {
+    //   comms.restoreSession();
+    // }
+    
     React.render(
       <ChatArea comms={comms} config={this.config} />,
       parentEl
